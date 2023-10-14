@@ -15,7 +15,6 @@ mongodb.connect(
         if (err) console.log("Error connecting to MongoDB");
         else {
             console.log("Connecting to MongoDB successfully")
-            module.exports = client
             const app = require('./app.js')
             const server = http.createServer(app)
             let PORT = process.env.PORT || 3003
